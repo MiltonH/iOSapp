@@ -16,6 +16,7 @@ class MenuController: UITableViewController {
     @IBOutlet weak var afspreekView: UIImageView?
     
     override func viewDidLoad() {
+        tableView.separatorStyle = .none
         oefeningenView?.layer.cornerRadius = 10
         oefeningenView?.clipsToBounds = true
         problemenView?.layer.cornerRadius = 10

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		52271C541E002DB6006CA849 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 52271C531E002DB6006CA849 /* Podfile */; };
-		52271C561E003A1E006CA849 /* MenuController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52271C551E003A1E006CA849 /* MenuController2.swift */; };
 		526668771DF6DB7F005114A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526668761DF6DB7F005114A1 /* AppDelegate.swift */; };
 		526668791DF6DB7F005114A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526668781DF6DB7F005114A1 /* ViewController.swift */; };
 		5266687C1DF6DB7F005114A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5266687A1DF6DB7F005114A1 /* Main.storyboard */; };
@@ -39,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		52271C531E002DB6006CA849 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		52271C551E003A1E006CA849 /* MenuController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController2.swift; sourceTree = "<group>"; };
 		526668731DF6DB7F005114A1 /* Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		526668761DF6DB7F005114A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		526668781DF6DB7F005114A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				526668A81DF6F0AF005114A1 /* MenuController.swift */,
-				52271C551E003A1E006CA849 /* MenuController2.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -292,7 +289,6 @@
 				526668791DF6DB7F005114A1 /* ViewController.swift in Sources */,
 				526668A91DF6F0AF005114A1 /* MenuController.swift in Sources */,
 				526668771DF6DB7F005114A1 /* AppDelegate.swift in Sources */,
-				52271C561E003A1E006CA849 /* MenuController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
