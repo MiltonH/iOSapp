@@ -8,12 +8,12 @@
 
 import UIKit
 class MenuController: UITableViewController {
-    @IBOutlet weak var oefeningenView: UIImageView?
-    @IBOutlet weak var problemenView: UIImageView?
-    @IBOutlet weak var chirurgenView: UIImageView?
-    @IBOutlet weak var dienstView: UIImageView?
-    @IBOutlet weak var glorieuxView: UIImageView?
-    @IBOutlet weak var afspreekView: UIImageView?
+    @IBOutlet weak var oefeningenView: UIButton?
+    @IBOutlet weak var problemenView: UIButton?
+    @IBOutlet weak var chirurgenView: UIButton?
+    @IBOutlet weak var dienstView: UIButton?
+    @IBOutlet weak var glorieuxView: UIButton?
+    @IBOutlet weak var afspreekView: UIButton?
     
     override func viewDidLoad() {
         tableView.separatorStyle = .none
@@ -29,5 +29,24 @@ class MenuController: UITableViewController {
         glorieuxView?.clipsToBounds = true
         afspreekView?.layer.cornerRadius = 10
         afspreekView?.clipsToBounds = true
+    }
+    
+    @IBAction func openOefeningen() {
+        print("openOefeningen clicked")
+    }
+    @IBAction func openProblemen() {
+        print("openProblemen clicked")
+    }
+    @IBAction func openChirurgen() {
+        print("openChirurgen clicked")
+    }
+    @IBAction func openDienst() {
+        print("openDienst clicked")
+    }
+    @IBAction func openGlorieux() {
+        print("openGlorieux clicked")
+    }
+    @IBAction func openAfspreken() {
+        print("openAfspreken clicked")
     }
 }
