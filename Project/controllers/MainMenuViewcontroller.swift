@@ -40,14 +40,25 @@ class MainMenuViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,for: indexPath) as! MainMenuCell
-        cell.MenuItem.image = UIImage(named: "oefeningen")
+        cell.MenuItem.image = UIImage(named: model.menuItems[indexPath.item])
         cell.MenuItem.layer.cornerRadius = 10
         cell.MenuItem.clipsToBounds = true
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            print("Selected item: " + model.menuItems[indexPath.row])
+        let selectedItem = model.menuItems[indexPath.row]
+            print("Selected item: " + selectedItem)
+        performSegue(withIdentifier: selectedItem + "Segue" , sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "problemen":
+            break
+        default:
+            break
+        }
     }
 }
 

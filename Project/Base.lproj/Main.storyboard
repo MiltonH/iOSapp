@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="llz-Au-3KK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="llz-Au-3KK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,13 +26,15 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainMenuCell" id="T3X-xM-MdG" customClass="MainMenuCell" customModule="Project" customModuleProvider="target">
-                                <rect key="frame" x="88" y="0.0" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZIR-mE-vPt"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZIR-mE-vPt">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        </imageView>
                                     </subviews>
                                 </view>
                                 <constraints>
@@ -48,199 +54,162 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="AppName" id="BxH-QI-Dby"/>
+                    <connections>
+                        <segue destination="e7h-Cb-x7c" kind="show" identifier="problemenSegue" id="1u4-wm-BpP"/>
+                        <segue destination="6U3-bA-kDH" kind="show" identifier="oefeningenSegue" id="OPn-4b-BUP"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOU-Ja-Reb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2664.8000000000002" y="-28.335832083958024"/>
         </scene>
-        <!--AppName-->
-        <scene sceneID="jf6-S3-eGT">
+        <!--Problemen-->
+        <scene sceneID="WBP-92-cHS">
             <objects>
-                <tableViewController id="dFM-5V-BDG" customClass="MenuController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="176" sectionHeaderHeight="28" sectionFooterHeight="28" id="5SF-T4-xBS">
+                <tableViewController id="e7h-Cb-x7c" customClass="ProblemenViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xof-bz-5um">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="wUc-gP-tot">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LVT-dr-qNr">
-                                        <rect key="frame" x="0.0" y="64" width="375" height="176"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="LVT-dr-qNr" id="oQy-Ym-FM8">
-                                            <frame key="frameInset" width="375" height="176"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fBC-Wx-Drg">
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPb-JV-5wI">
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="160" id="eZ7-9L-6ht">
-                                                                    <variation key="widthClass=regular" constant="300"/>
-                                                                </constraint>
-                                                                <constraint firstAttribute="width" constant="160" id="z1K-mh-u4K">
-                                                                    <variation key="widthClass=regular" constant="300"/>
-                                                                </constraint>
-                                                            </constraints>
-                                                            <state key="normal" image="doge.jpg"/>
-                                                            <connections>
-                                                                <action selector="openOefeningen" destination="dFM-5V-BDG" eventType="touchUpInside" id="2my-n9-klH"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bJp-Zj-Yfm">
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="160" id="6iF-lG-Fdk">
-                                                                    <variation key="widthClass=regular" constant="300"/>
-                                                                </constraint>
-                                                                <constraint firstAttribute="width" constant="160" id="yPB-fe-gcw">
-                                                                    <variation key="widthClass=regular" constant="300"/>
-                                                                </constraint>
-                                                            </constraints>
-                                                            <state key="normal" image="doge.jpg"/>
-                                                            <connections>
-                                                                <action selector="openProblemen" destination="dFM-5V-BDG" eventType="touchUpInside" id="Lbq-jt-xmh"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="probleemCell" id="pTb-g2-zBq" customClass="ProbleemCell" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pTb-g2-zBq" id="ZHc-SI-0Ab">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vep-Xs-yDe">
+                                            <rect key="frame" x="8" y="3" width="52" height="52"/>
                                             <constraints>
-                                                <constraint firstItem="fBC-Wx-Drg" firstAttribute="centerY" secondItem="oQy-Ym-FM8" secondAttribute="centerY" id="fhZ-tO-VFm"/>
-                                                <constraint firstItem="fBC-Wx-Drg" firstAttribute="centerX" secondItem="oQy-Ym-FM8" secondAttribute="centerX" id="yz8-lf-YcX"/>
+                                                <constraint firstAttribute="width" constant="52" id="Qpm-6C-wA2"/>
+                                                <constraint firstAttribute="height" constant="52" id="buk-Fm-FBd"/>
                                             </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="G8B-25-cXQ">
-                                        <rect key="frame" x="0.0" y="240" width="375" height="176"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="G8B-25-cXQ" id="CH1-eu-aJg">
-                                            <frame key="frameInset" width="375" height="176"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tD8-zp-NQX">
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4Y-J6-2G6">
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="160" id="PRx-aA-aOL">
-                                                                    <variation key="widthClass=regular" constant="300"/>
-                                                                </constraint>
-                                                                <constraint firstAttribute="width" constant="160" id="g4Q-Gw-WP5">
-                                                                    <variation key="widthClass=regular" constant="300"/>
-                                                                </constraint>
-                                                            </constraints>
-                                                            <state key="normal" image="doge.jpg"/>
-                                                            <connections>
-                                                                <action selector="openChirurgen" destination="dFM-5V-BDG" eventType="touchUpInside" id="2VI-ru-7Ua"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enI-8H-oeA">
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="160" id="A9J-E2-Enz">
-                                                                    <variation key="widthClass=regular" constant="300"/>
-                                                                </constraint>
-                                                                <constraint firstAttribute="height" constant="160" id="hny-lu-fbN">
-                                                                    <variation key="widthClass=regular" constant="300"/>
-                                                                </constraint>
-                                                            </constraints>
-                                                            <state key="normal" image="doge.jpg"/>
-                                                            <connections>
-                                                                <action selector="openGlorieux" destination="dFM-5V-BDG" eventType="touchUpInside" id="AUQ-kQ-zgD"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="tD8-zp-NQX" firstAttribute="centerX" secondItem="CH1-eu-aJg" secondAttribute="centerX" id="dgg-h6-6Ct"/>
-                                                <constraint firstItem="tD8-zp-NQX" firstAttribute="centerY" secondItem="CH1-eu-aJg" secondAttribute="centerY" id="wZr-JI-TGu"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cuj-Wn-lJv">
-                                        <rect key="frame" x="0.0" y="416" width="375" height="176"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="cuj-Wn-lJv" id="eZO-ZE-gMW">
-                                            <frame key="frameInset" width="375" height="176"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="e8u-Fp-QCv">
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="huD-8J-bRu">
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="160" id="7u3-QC-sPu">
-                                                                    <variation key="widthClass=regular" constant="300"/>
-                                                                </constraint>
-                                                                <constraint firstAttribute="height" constant="160" id="JRI-bC-mss">
-                                                                    <variation key="widthClass=regular" constant="300"/>
-                                                                </constraint>
-                                                            </constraints>
-                                                            <state key="normal" image="doge.jpg"/>
-                                                            <connections>
-                                                                <action selector="openDienst" destination="dFM-5V-BDG" eventType="touchUpInside" id="pvu-oF-6u1"/>
-                                                            </connections>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh1-Vh-Kzh">
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="160" id="9oZ-8P-7GH">
-                                                                    <variation key="widthClass=regular" constant="300"/>
-                                                                </constraint>
-                                                                <constraint firstAttribute="width" constant="160" id="Ze9-5O-kWt">
-                                                                    <variation key="widthClass=regular" constant="300"/>
-                                                                </constraint>
-                                                            </constraints>
-                                                            <state key="normal" image="doge.jpg"/>
-                                                            <connections>
-                                                                <action selector="openAfspreken" destination="dFM-5V-BDG" eventType="touchUpInside" id="obR-j3-uiN"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="e8u-Fp-QCv" firstAttribute="centerY" secondItem="eZO-ZE-gMW" secondAttribute="centerY" id="6VU-Gy-apU"/>
-                                                <constraint firstItem="e8u-Fp-QCv" firstAttribute="centerX" secondItem="eZO-ZE-gMW" secondAttribute="centerX" id="7JP-vE-Qil"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Probleem X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ez5-3H-r3g">
+                                            <rect key="frame" x="68" y="19" width="89" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="vep-Xs-yDe" firstAttribute="leading" secondItem="ZHc-SI-0Ab" secondAttribute="leading" constant="8" id="0pE-zh-8xI"/>
+                                        <constraint firstItem="vep-Xs-yDe" firstAttribute="centerY" secondItem="ZHc-SI-0Ab" secondAttribute="centerY" id="PxM-OZ-jkN"/>
+                                        <constraint firstItem="ez5-3H-r3g" firstAttribute="leading" secondItem="vep-Xs-yDe" secondAttribute="trailing" constant="8" id="UXb-n3-WkU"/>
+                                        <constraint firstItem="ez5-3H-r3g" firstAttribute="centerY" secondItem="ZHc-SI-0Ab" secondAttribute="centerY" id="dhM-W0-RqX"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="ez5-3H-r3g" id="qFr-hT-pnv"/>
+                                    <outlet property="previewImageView" destination="vep-Xs-yDe" id="5lv-5C-OcU"/>
+                                    <segue destination="d56-bY-ZIm" kind="show" identifier="probleemDetail" id="jBV-uR-0TK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="dFM-5V-BDG" id="r3J-zW-DaD"/>
-                            <outlet property="delegate" destination="dFM-5V-BDG" id="KET-LM-uin"/>
+                            <outlet property="dataSource" destination="e7h-Cb-x7c" id="XHB-e2-MIv"/>
+                            <outlet property="delegate" destination="e7h-Cb-x7c" id="pZI-22-LyU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="AppName" id="o03-qy-s2e"/>
-                    <connections>
-                        <outlet property="afspreekView" destination="kh1-Vh-Kzh" id="UJL-mm-4TJ"/>
-                        <outlet property="chirurgenView" destination="c4Y-J6-2G6" id="8OI-4z-2JX"/>
-                        <outlet property="dienstView" destination="huD-8J-bRu" id="rjX-ER-STW"/>
-                        <outlet property="glorieuxView" destination="enI-8H-oeA" id="kmb-UV-WmI"/>
-                        <outlet property="oefeningenView" destination="aPb-JV-5wI" id="ocX-bj-gab"/>
-                        <outlet property="problemenView" destination="bJp-Zj-Yfm" id="Wh9-7e-auy"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Problemen" id="jaO-e2-WYg"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oJ3-EA-OdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HkO-im-FJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2667.3913043478265" y="669.56521739130437"/>
+            <point key="canvasLocation" x="3482.4000000000001" y="-37.331334332833585"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="9eg-AJ-hp9">
+        <!--Probleem-->
+        <scene sceneID="zlK-JJ-ALx">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k9q-VU-jvz" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DDM-la-GX0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <viewController id="d56-bY-ZIm" customClass="ProbleemViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7FD-sJ-YEU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jt8-O3-MD5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sno-uO-RH5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cGK-03-FJn">
+                                <rect key="frame" x="67" y="122" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="5nG-k7-sEI"/>
+                                    <constraint firstAttribute="height" constant="128" id="oCf-oK-2Nx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Testprobleem" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJQ-gl-DeP">
+                                <rect key="frame" x="16" y="72" width="343" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bd5-W2-5G4">
+                                <rect key="frame" x="16" y="266" width="343" height="401"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qJQ-gl-DeP" firstAttribute="trailing" secondItem="Sno-uO-RH5" secondAttribute="trailingMargin" id="31w-iX-GYJ"/>
+                            <constraint firstItem="cGK-03-FJn" firstAttribute="centerX" secondItem="Sno-uO-RH5" secondAttribute="centerX" id="7Y8-kH-w9k"/>
+                            <constraint firstItem="bd5-W2-5G4" firstAttribute="top" secondItem="cGK-03-FJn" secondAttribute="bottom" constant="16" id="EK3-lI-8bj"/>
+                            <constraint firstItem="bd5-W2-5G4" firstAttribute="trailing" secondItem="Sno-uO-RH5" secondAttribute="trailingMargin" id="IE4-TL-mXj"/>
+                            <constraint firstItem="bd5-W2-5G4" firstAttribute="leading" secondItem="Sno-uO-RH5" secondAttribute="leadingMargin" id="eEZ-o9-eqd"/>
+                            <constraint firstItem="Jt8-O3-MD5" firstAttribute="top" secondItem="bd5-W2-5G4" secondAttribute="bottom" id="j2g-UL-6ui"/>
+                            <constraint firstItem="cGK-03-FJn" firstAttribute="top" secondItem="qJQ-gl-DeP" secondAttribute="bottom" constant="16" id="j3s-vI-vL5"/>
+                            <constraint firstItem="qJQ-gl-DeP" firstAttribute="top" secondItem="7FD-sJ-YEU" secondAttribute="bottom" constant="8" id="oji-s7-iMZ"/>
+                            <constraint firstItem="qJQ-gl-DeP" firstAttribute="leading" secondItem="Sno-uO-RH5" secondAttribute="leadingMargin" id="qNe-kg-HSX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Probleem" id="vIU-Da-QYT"/>
                     <connections>
-                        <segue destination="dFM-5V-BDG" kind="relationship" relationship="rootViewController" id="xeZ-dx-r82"/>
+                        <outlet property="detailsTextView" destination="bd5-W2-5G4" id="cEz-7J-NWU"/>
+                        <outlet property="probleemImageView" destination="cGK-03-FJn" id="Qhl-1w-ynv"/>
+                        <outlet property="probleemLabel" destination="qJQ-gl-DeP" id="n9T-VE-3uS"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W4b-K4-WQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jsf-r4-rcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1728.8" y="670.61469265367316"/>
+            <point key="canvasLocation" x="4341.6000000000004" y="-34.632683658170919"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="l2E-Xl-MA5">
+            <objects>
+                <tableViewController id="6U3-bA-kDH" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="AFv-hP-0Gh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="oefeningCell" id="NpY-VP-AmT">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NpY-VP-AmT" id="Vxn-hQ-3Jk">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6U3-bA-kDH" id="T1S-st-dX5"/>
+                            <outlet property="delegate" destination="6U3-bA-kDH" id="8o8-Eq-ckK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="My8-2d-1pN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3482" y="733"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="fhv-qC-sWR">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="9A7-9Y-EGE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQF-cY-mrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4342" y="733"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AFv-0M-Ngs">
@@ -261,7 +230,4 @@
             <point key="canvasLocation" x="1729" y="-28"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="doge.jpg" width="600" height="600"/>
-    </resources>
 </document>
