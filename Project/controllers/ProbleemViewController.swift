@@ -21,6 +21,15 @@ class ProbleemViewController: UIViewController {
         detailsTextView.text = probleem.beschrijving
     
     }
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if !splitViewController!.isCollapsed {
+            navigationItem.leftBarButtonItem = splitViewController!.displayModeButtonItem
+        }
+    }
     
+    @IBAction func returnToMenu(){
+        self.performSegue(withIdentifier: "unwindToMenu", sender: self)
+    }
     
 }

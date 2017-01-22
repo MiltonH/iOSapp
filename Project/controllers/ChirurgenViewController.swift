@@ -10,7 +10,9 @@ import UIKit
 class ChirurgenViewController: UITableViewController {
     private var chirurgenList: [Chirurg] = [Chirurg(name: "Dr. Olivier Zeegers", image:#imageLiteral(resourceName: "drZeegers.jpg"), details: "details komen hier     sdfsdfsdfsdgdsfgsdbgjhsfudijsvisdfivfdjhvbdfsbvfhdivbfdsjivn fdjocnvfjifd" ),
                                             Chirurg(name: "Dr. Olivier Fabre", image:#imageLiteral(resourceName: "drFabre.jpg"), details: "details komen hier     sdfsdfsdfsdgdsfgsdbgjhsfudijsvisdfivfdjhvbdfsbvfhdivbfdsjivn fdjocnvfjifd" )]
-    
+    override func viewDidLoad() {
+        splitViewController!.delegate = self
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -44,5 +46,14 @@ class ChirurgenViewController: UITableViewController {
         default:
             break
         }
+    }
+}
+
+extension ChirurgenViewController: UISplitViewControllerDelegate {
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        print(splitViewController.traitCollection)
+        print(secondaryViewController.traitCollection)
+        return true
     }
 }

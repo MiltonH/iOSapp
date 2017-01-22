@@ -15,6 +15,10 @@ class ProblemenViewController: UITableViewController {
                                          Probleem(name: "Calcifiërende tendinitis", image: #imageLiteral(resourceName: "calcifying2.png"), beschrijving: "Het gaat per definitie om een afzetting van calciumkristallen in één van de pezen. In het bijzonder gaat het hier om calcificaties (kalkafzettingen) in de pezen rond de schouderkop (meer bepaald de ‘rotator cuff' pezen). Deze calcificaties ontstaan niet na een ongeval en zelfs niet na een overbelasting. Men denkt dat ze ontstaan in een zone van verminderde bloeddoorstroming waarbij bepaalde cellen worden aangespoord tot het verkeerdelijk vormen van calcium." ),
                                          Probleem(name: "Labrumscheur", image: #imageLiteral(resourceName: "labrum1.png"), beschrijving: "Het zachte materiaal van het labrum kan klem komen te zitten tussen het glenoïd en de kop van de humerus. Wanneer dit gebeurt, kan het labrumweefsel gaan scheuren. Als het erger wordt, kan het een flap van weefsel worden dat in en uit het gewricht gaat. De flap veroorzaakt pijn en gevoel van inklemming als de schouder bewogen wordt. Verschillende pezen en ligamenten hechten aan het labrum, deze helpen om de stabiliteit van het gewricht te waarborgen. Dus als het labrum scheurt, wordt de schouder vaak minder stabiel." )]
     
+    override func viewDidLoad() {
+        splitViewController!.delegate = self
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -37,11 +41,21 @@ class ProblemenViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case "probleemDetail":
-            let destination = segue.destination as! ProbleemViewController
+            let navigationController = segue.destination as! UINavigationController
+            let probleemViewController = navigationController.topViewController as! ProbleemViewController
             let selectedIndex = tableView.indexPathForSelectedRow!.row
-            destination.probleem = problemen[selectedIndex]
+            probleemViewController.probleem = problemen[selectedIndex]
         default:
             break
         }
+    }
+}
+
+extension ProblemenViewController: UISplitViewControllerDelegate {
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        print(splitViewController.traitCollection)
+        print(secondaryViewController.traitCollection)
+        return true
     }
 }
