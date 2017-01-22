@@ -39,6 +39,10 @@
 		52DA7A0A1E34F910007C5575 /* glorieuxParking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52DA7A091E34F910007C5575 /* glorieuxParking.jpg */; };
 		52DA7A0D1E34FBDA007C5575 /* drFabre.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52DA7A0B1E34FBDA007C5575 /* drFabre.jpg */; };
 		52DA7A0E1E34FBDA007C5575 /* drZeegers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52DA7A0C1E34FBDA007C5575 /* drZeegers.jpg */; };
+		52DA7A101E3500DF007C5575 /* ChirurgenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A0F1E3500DF007C5575 /* ChirurgenViewController.swift */; };
+		52DA7A121E350132007C5575 /* Chirurg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A111E350132007C5575 /* Chirurg.swift */; };
+		52DA7A141E35018A007C5575 /* ChirurgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A131E35018A007C5575 /* ChirurgCell.swift */; };
+		52DA7A161E35021A007C5575 /* ChirurgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A151E35021A007C5575 /* ChirurgViewController.swift */; };
 		52FFDC451E267F2F006B6870 /* Probleem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFDC441E267F2F006B6870 /* Probleem.swift */; };
 		52FFDC491E268427006B6870 /* ProblemenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFDC481E268427006B6870 /* ProblemenViewController.swift */; };
 		52FFDC4B1E2687A1006B6870 /* ProbleemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFDC4A1E2687A1006B6870 /* ProbleemCell.swift */; };
@@ -103,6 +107,10 @@
 		52DA7A091E34F910007C5575 /* glorieuxParking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = glorieuxParking.jpg; path = "../../../../project afbeeldingen/glorieuxParking.jpg"; sourceTree = "<group>"; };
 		52DA7A0B1E34FBDA007C5575 /* drFabre.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = drFabre.jpg; path = "../../../../project afbeeldingen/drFabre.jpg"; sourceTree = "<group>"; };
 		52DA7A0C1E34FBDA007C5575 /* drZeegers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = drZeegers.jpg; path = "../../../../project afbeeldingen/drZeegers.jpg"; sourceTree = "<group>"; };
+		52DA7A0F1E3500DF007C5575 /* ChirurgenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChirurgenViewController.swift; sourceTree = "<group>"; };
+		52DA7A111E350132007C5575 /* Chirurg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chirurg.swift; sourceTree = "<group>"; };
+		52DA7A131E35018A007C5575 /* ChirurgCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChirurgCell.swift; sourceTree = "<group>"; };
+		52DA7A151E35021A007C5575 /* ChirurgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChirurgViewController.swift; sourceTree = "<group>"; };
 		52FFDC441E267F2F006B6870 /* Probleem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Probleem.swift; sourceTree = "<group>"; };
 		52FFDC481E268427006B6870 /* ProblemenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemenViewController.swift; sourceTree = "<group>"; };
 		52FFDC4A1E2687A1006B6870 /* ProbleemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProbleemCell.swift; sourceTree = "<group>"; };
@@ -174,6 +182,7 @@
 				525482A51E1FE9010092425C /* MainMenuCell.swift */,
 				52FFDC4A1E2687A1006B6870 /* ProbleemCell.swift */,
 				52A1725E1E33F8110097EC9A /* OefeningCell.swift */,
+				52DA7A131E35018A007C5575 /* ChirurgCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +193,7 @@
 				525482A81E1FEC480092425C /* MainMenuModel.swift */,
 				52FFDC441E267F2F006B6870 /* Probleem.swift */,
 				52A172621E33F9270097EC9A /* Oefening.swift */,
+				52DA7A111E350132007C5575 /* Chirurg.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -278,6 +288,8 @@
 				52A172641E33FBCD0097EC9A /* VideoPlayerViewController.swift */,
 				52DA7A051E34EEC8007C5575 /* AfsprekenController.swift */,
 				52DA7A071E34F435007C5575 /* glorieuxViewController.swift */,
+				52DA7A0F1E3500DF007C5575 /* ChirurgenViewController.swift */,
+				52DA7A151E35021A007C5575 /* ChirurgViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -581,9 +593,11 @@
 			files = (
 				52A1725F1E33F8110097EC9A /* OefeningCell.swift in Sources */,
 				526668791DF6DB7F005114A1 /* ViewController.swift in Sources */,
+				52DA7A161E35021A007C5575 /* ChirurgViewController.swift in Sources */,
 				52A172651E33FBCD0097EC9A /* VideoPlayerViewController.swift in Sources */,
 				525482A41E1FE5F40092425C /* MainMenuViewcontroller.swift in Sources */,
 				52FFDC491E268427006B6870 /* ProblemenViewController.swift in Sources */,
+				52DA7A121E350132007C5575 /* Chirurg.swift in Sources */,
 				52DA7A061E34EEC8007C5575 /* AfsprekenController.swift in Sources */,
 				52A172631E33F9270097EC9A /* Oefening.swift in Sources */,
 				525482A91E1FEC480092425C /* MainMenuModel.swift in Sources */,
@@ -593,6 +607,8 @@
 				52DA7A081E34F435007C5575 /* glorieuxViewController.swift in Sources */,
 				525482A61E1FE9010092425C /* MainMenuCell.swift in Sources */,
 				52FFDC4B1E2687A1006B6870 /* ProbleemCell.swift in Sources */,
+				52DA7A101E3500DF007C5575 /* ChirurgenViewController.swift in Sources */,
+				52DA7A141E35018A007C5575 /* ChirurgCell.swift in Sources */,
 				52FFDC451E267F2F006B6870 /* Probleem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

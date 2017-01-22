@@ -59,6 +59,7 @@
                         <segue destination="6U3-bA-kDH" kind="show" identifier="oefeningenSegue" id="OPn-4b-BUP"/>
                         <segue destination="e5B-g8-d9M" kind="show" identifier="afsprekenSegue" id="Yhj-aa-MrX"/>
                         <segue destination="9QB-ZO-L8h" kind="show" identifier="glorieuxSegue" id="FGv-Bd-M1g"/>
+                        <segue destination="hQr-oI-xth" kind="show" identifier="chirurgenSegue" id="8Ke-iW-PKh"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOU-Ja-Reb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -156,13 +157,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qJQ-gl-DeP" firstAttribute="trailing" secondItem="Sno-uO-RH5" secondAttribute="trailingMargin" id="31w-iX-GYJ"/>
+                            <constraint firstItem="Jt8-O3-MD5" firstAttribute="top" secondItem="bd5-W2-5G4" secondAttribute="bottom" id="5Fb-eu-fWP"/>
                             <constraint firstItem="cGK-03-FJn" firstAttribute="centerX" secondItem="Sno-uO-RH5" secondAttribute="centerX" id="7Y8-kH-w9k"/>
                             <constraint firstItem="bd5-W2-5G4" firstAttribute="top" secondItem="cGK-03-FJn" secondAttribute="bottom" constant="16" id="EK3-lI-8bj"/>
                             <constraint firstItem="bd5-W2-5G4" firstAttribute="trailing" secondItem="Sno-uO-RH5" secondAttribute="trailingMargin" id="IE4-TL-mXj"/>
+                            <constraint firstItem="qJQ-gl-DeP" firstAttribute="top" secondItem="7FD-sJ-YEU" secondAttribute="bottom" constant="8" id="YaM-mE-2SY"/>
                             <constraint firstItem="bd5-W2-5G4" firstAttribute="leading" secondItem="Sno-uO-RH5" secondAttribute="leadingMargin" id="eEZ-o9-eqd"/>
-                            <constraint firstItem="Jt8-O3-MD5" firstAttribute="top" secondItem="bd5-W2-5G4" secondAttribute="bottom" id="j2g-UL-6ui"/>
                             <constraint firstItem="cGK-03-FJn" firstAttribute="top" secondItem="qJQ-gl-DeP" secondAttribute="bottom" constant="16" id="j3s-vI-vL5"/>
-                            <constraint firstItem="qJQ-gl-DeP" firstAttribute="top" secondItem="7FD-sJ-YEU" secondAttribute="bottom" constant="8" id="oji-s7-iMZ"/>
                             <constraint firstItem="qJQ-gl-DeP" firstAttribute="leading" secondItem="Sno-uO-RH5" secondAttribute="leadingMargin" id="qNe-kg-HSX"/>
                         </constraints>
                     </view>
@@ -284,6 +285,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YoY-Tp-5i5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3480.8000000000002" y="2218.7406296851577"/>
+        </scene>
+        <!--Chirurgen-->
+        <scene sceneID="YqT-RP-O3k">
+            <objects>
+                <tableViewController id="hQr-oI-xth" customClass="ChirurgenViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="168" sectionHeaderHeight="28" sectionFooterHeight="28" id="7O1-wE-bBW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="chirurgCell" id="mb2-9I-Za7" customClass="ChirurgCell" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="168"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mb2-9I-Za7" id="Bln-oB-7Rb">
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="167"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dr. Olivier Zeegers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ug3-Qi-nfa">
+                                            <rect key="frame" x="184" y="73" width="142" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dge-cw-yu4">
+                                            <rect key="frame" x="8" y="7" width="152" height="152"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="152" id="b9F-Id-cMN"/>
+                                                <constraint firstAttribute="height" constant="152" id="fko-0e-sVI"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ug3-Qi-nfa" firstAttribute="leading" secondItem="Dge-cw-yu4" secondAttribute="trailing" constant="16" id="FtT-Oj-6eu"/>
+                                        <constraint firstItem="ug3-Qi-nfa" firstAttribute="centerY" secondItem="Bln-oB-7Rb" secondAttribute="centerY" id="Kmo-3W-90z"/>
+                                        <constraint firstItem="Dge-cw-yu4" firstAttribute="centerY" secondItem="Bln-oB-7Rb" secondAttribute="centerY" id="Pmt-Fl-Muv"/>
+                                        <constraint firstItem="Dge-cw-yu4" firstAttribute="leading" secondItem="Bln-oB-7Rb" secondAttribute="leading" constant="8" id="VIG-Qq-0dr"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageImageView" destination="Dge-cw-yu4" id="Aqh-pp-Pok"/>
+                                    <outlet property="nameLabel" destination="ug3-Qi-nfa" id="GP9-dr-YBc"/>
+                                    <segue destination="qAU-SY-v8c" kind="show" identifier="chirurgDetail" id="NHF-nu-aFR"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hQr-oI-xth" id="sCy-7I-aun"/>
+                            <outlet property="delegate" destination="hQr-oI-xth" id="96Y-r7-xb6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Chirurgen" id="DFX-bc-01E"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqS-qW-yga" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3481" y="-795"/>
+        </scene>
+        <!--Chirurg-->
+        <scene sceneID="Ga9-xW-M9s">
+            <objects>
+                <viewController id="qAU-SY-v8c" customClass="ChirurgViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CGO-UG-Tjf"/>
+                        <viewControllerLayoutGuide type="bottom" id="iTP-LP-lpI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RaC-kA-FfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MRF-Rg-bcG">
+                                <rect key="frame" x="111.5" y="129.5" width="152" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="N8u-5d-Io2"/>
+                                    <constraint firstAttribute="width" constant="152" id="vgt-D2-ADV"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sX-s0-zYd">
+                                <rect key="frame" x="16" y="297.5" width="343" height="353.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chirurg" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDu-UY-N5y">
+                                <rect key="frame" x="16" y="80" width="343" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BDu-UY-N5y" firstAttribute="top" secondItem="CGO-UG-Tjf" secondAttribute="bottom" constant="16" id="Dsg-Pk-Y9z"/>
+                            <constraint firstItem="MRF-Rg-bcG" firstAttribute="centerX" secondItem="RaC-kA-FfJ" secondAttribute="centerX" id="EBE-na-gEH"/>
+                            <constraint firstItem="MRF-Rg-bcG" firstAttribute="top" secondItem="BDu-UY-N5y" secondAttribute="bottom" constant="16" id="hSZ-8D-Zp8"/>
+                            <constraint firstItem="1sX-s0-zYd" firstAttribute="leading" secondItem="RaC-kA-FfJ" secondAttribute="leadingMargin" id="iYx-Do-EfM"/>
+                            <constraint firstItem="1sX-s0-zYd" firstAttribute="top" secondItem="MRF-Rg-bcG" secondAttribute="bottom" constant="16" id="jIb-Be-SUE"/>
+                            <constraint firstItem="1sX-s0-zYd" firstAttribute="trailing" secondItem="RaC-kA-FfJ" secondAttribute="trailingMargin" id="mch-OF-Zg5"/>
+                            <constraint firstItem="iTP-LP-lpI" firstAttribute="top" secondItem="1sX-s0-zYd" secondAttribute="bottom" constant="16" id="rDn-7Y-gBx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BDu-UY-N5y" secondAttribute="trailing" id="wJS-Bm-Oub"/>
+                            <constraint firstItem="BDu-UY-N5y" firstAttribute="leading" secondItem="RaC-kA-FfJ" secondAttribute="leadingMargin" id="y1f-vO-aAe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chirurg" id="eiX-Vx-Qg6"/>
+                    <connections>
+                        <outlet property="chirurgImageView" destination="MRF-Rg-bcG" id="o1M-kf-XmD"/>
+                        <outlet property="detailsTextView" destination="1sX-s0-zYd" id="j6D-8w-nUY"/>
+                        <outlet property="nameLabel" destination="BDu-UY-N5y" id="0Ft-zX-Crk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqQ-k4-UFu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4341.6000000000004" y="-796.55172413793105"/>
         </scene>
         <!--Oefeningen-->
         <scene sceneID="l2E-Xl-MA5">
