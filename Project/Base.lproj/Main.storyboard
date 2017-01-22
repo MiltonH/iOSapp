@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--AppName-->
+        <!--Shouder Kliniek-->
         <scene sceneID="LVO-jZ-g2g">
             <objects>
                 <collectionViewController id="yfu-Dm-Xyw" customClass="MainMenuViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,10 +53,12 @@
                             <outlet property="delegate" destination="yfu-Dm-Xyw" id="yOp-2U-COy"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="AppName" id="BxH-QI-Dby"/>
+                    <navigationItem key="navigationItem" title="Shouder Kliniek" id="BxH-QI-Dby"/>
                     <connections>
                         <segue destination="e7h-Cb-x7c" kind="show" identifier="problemenSegue" id="1u4-wm-BpP"/>
                         <segue destination="6U3-bA-kDH" kind="show" identifier="oefeningenSegue" id="OPn-4b-BUP"/>
+                        <segue destination="e5B-g8-d9M" kind="show" identifier="afsprekenSegue" id="Yhj-aa-MrX"/>
+                        <segue destination="9QB-ZO-L8h" kind="show" identifier="glorieuxSegue" id="FGv-Bd-M1g"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOU-Ja-Reb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -76,7 +78,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pTb-g2-zBq" id="ZHc-SI-0Ab">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vep-Xs-yDe">
@@ -175,22 +177,157 @@
             </objects>
             <point key="canvasLocation" x="4341.6000000000004" y="-34.632683658170919"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Afspraak maken-->
+        <scene sceneID="3yN-oq-Ogi">
+            <objects>
+                <viewController id="e5B-g8-d9M" customClass="AfsprekenViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="US1-bL-aTH"/>
+                        <viewControllerLayoutGuide type="bottom" id="3do-2c-2eP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZdH-RB-Vdh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+32- 55-233721" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ0-lX-4EH">
+                                <rect key="frame" x="16" y="80" width="343" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrz-yr-vqQ">
+                                <rect key="frame" x="16" y="123" width="343" height="30"/>
+                                <state key="normal" title="Website Orthopedie"/>
+                                <connections>
+                                    <action selector="openWebsiteWithSender:" destination="e5B-g8-d9M" eventType="touchUpInside" id="4Vk-Uj-U93"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSr-KU-ux9">
+                                <rect key="frame" x="16" y="169" width="343" height="30"/>
+                                <state key="normal" title="info@orthopedie-ronse.be"/>
+                                <connections>
+                                    <action selector="sendMailWithSender:" destination="e5B-g8-d9M" eventType="touchUpInside" id="cca-xr-chY"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wD9-8I-Mqw">
+                                <rect key="frame" x="16" y="215" width="343" height="436"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Zoals gewoonlijk raadpleegt u best eerst uw huisarts. Indien nodig verwijst hij u door naar een van onze specialisten. Bij een dringend probleem kan hij of zij ons persoonlijk contacteren om een afspraak vast te leggen.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wD9-8I-Mqw" firstAttribute="leading" secondItem="ZdH-RB-Vdh" secondAttribute="leadingMargin" id="2Qt-NE-GDj"/>
+                            <constraint firstItem="Mrz-yr-vqQ" firstAttribute="trailing" secondItem="ZdH-RB-Vdh" secondAttribute="trailingMargin" id="4Mo-VZ-M6k"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wD9-8I-Mqw" secondAttribute="trailing" id="BG0-D7-bAB"/>
+                            <constraint firstItem="gSr-KU-ux9" firstAttribute="trailing" secondItem="ZdH-RB-Vdh" secondAttribute="trailingMargin" id="Eml-f4-OhV"/>
+                            <constraint firstItem="gSr-KU-ux9" firstAttribute="leading" secondItem="ZdH-RB-Vdh" secondAttribute="leadingMargin" id="NPo-QK-ubf"/>
+                            <constraint firstItem="Mrz-yr-vqQ" firstAttribute="leading" secondItem="ZdH-RB-Vdh" secondAttribute="leadingMargin" id="QK8-vB-vCa"/>
+                            <constraint firstItem="bQ0-lX-4EH" firstAttribute="trailing" secondItem="ZdH-RB-Vdh" secondAttribute="trailingMargin" id="TXJ-Nf-baC"/>
+                            <constraint firstItem="bQ0-lX-4EH" firstAttribute="top" secondItem="US1-bL-aTH" secondAttribute="bottom" constant="16" id="ULh-11-dPL"/>
+                            <constraint firstItem="bQ0-lX-4EH" firstAttribute="leading" secondItem="ZdH-RB-Vdh" secondAttribute="leadingMargin" id="Ycs-CE-NFr"/>
+                            <constraint firstItem="wD9-8I-Mqw" firstAttribute="top" secondItem="gSr-KU-ux9" secondAttribute="bottom" constant="16" id="fuy-bG-M7G"/>
+                            <constraint firstItem="3do-2c-2eP" firstAttribute="top" secondItem="wD9-8I-Mqw" secondAttribute="bottom" constant="16" id="gH2-YV-MMk"/>
+                            <constraint firstItem="gSr-KU-ux9" firstAttribute="top" secondItem="Mrz-yr-vqQ" secondAttribute="bottom" constant="16" id="ssk-vC-U0A"/>
+                            <constraint firstItem="Mrz-yr-vqQ" firstAttribute="top" secondItem="bQ0-lX-4EH" secondAttribute="bottom" constant="16" id="xot-1c-6Sc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Afspraak maken" id="EJn-dh-Reu"/>
+                    <connections>
+                        <outlet property="info" destination="wD9-8I-Mqw" id="Vgd-wN-qwM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYu-8v-pHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3482" y="1513"/>
+        </scene>
+        <!--AZ Glorieux-->
+        <scene sceneID="06r-yP-pMb">
+            <objects>
+                <viewController id="9QB-ZO-L8h" customClass="GlorieuxViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vKj-cg-nxf"/>
+                        <viewControllerLayoutGuide type="bottom" id="51z-tv-1Dj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleAspectFit" id="bmm-pR-4hx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="glorieuxParking.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="e5a-Ir-ShB">
+                                <rect key="frame" x="0.0" y="72" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="3vb-EE-lCs"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ge-B5-Xfa">
+                                <rect key="frame" x="16" y="280" width="343" height="30"/>
+                                <state key="normal" title="Website AZ Glorieux"/>
+                                <connections>
+                                    <action selector="openGlorieuxWebsiteWithSender:" destination="9QB-ZO-L8h" eventType="touchUpInside" id="fza-1I-71C"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4ge-B5-Xfa" firstAttribute="trailing" secondItem="bmm-pR-4hx" secondAttribute="trailingMargin" id="56I-3J-eON"/>
+                            <constraint firstItem="e5a-Ir-ShB" firstAttribute="top" secondItem="vKj-cg-nxf" secondAttribute="bottom" id="LZs-7K-1md"/>
+                            <constraint firstItem="4ge-B5-Xfa" firstAttribute="top" secondItem="e5a-Ir-ShB" secondAttribute="bottom" constant="16" id="VCV-Rc-idm"/>
+                            <constraint firstItem="e5a-Ir-ShB" firstAttribute="leading" secondItem="bmm-pR-4hx" secondAttribute="leading" id="afX-Qo-9xG"/>
+                            <constraint firstAttribute="trailing" secondItem="e5a-Ir-ShB" secondAttribute="trailing" id="b1e-A8-CJT"/>
+                            <constraint firstItem="4ge-B5-Xfa" firstAttribute="leading" secondItem="bmm-pR-4hx" secondAttribute="leadingMargin" id="jAQ-AR-i2F"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="AZ Glorieux" id="xEy-3l-SaF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YoY-Tp-5i5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3480.8000000000002" y="2218.7406296851577"/>
+        </scene>
+        <!--Oefeningen-->
         <scene sceneID="l2E-Xl-MA5">
             <objects>
-                <tableViewController id="6U3-bA-kDH" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="AFv-hP-0Gh">
+                <tableViewController id="6U3-bA-kDH" customClass="OefeningenViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="AFv-hP-0Gh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="oefeningCell" id="NpY-VP-AmT">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="oefeningCell" id="NpY-VP-AmT" customClass="OefeningCell" customModule="Project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NpY-VP-AmT" id="Vxn-hQ-3Jk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voorbeeld Oefening" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEQ-NQ-vRb">
+                                            <rect key="frame" x="68" y="19.5" width="206" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GnD-I5-NeN">
+                                            <rect key="frame" x="8" y="3" width="52" height="52"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="52" id="S1d-Gy-dni"/>
+                                                <constraint firstAttribute="width" constant="52" id="xNw-eD-zG8"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="xEQ-NQ-vRb" firstAttribute="leading" secondItem="GnD-I5-NeN" secondAttribute="trailing" constant="8" id="7Vb-2Y-BqM"/>
+                                        <constraint firstItem="xEQ-NQ-vRb" firstAttribute="centerX" secondItem="Vxn-hQ-3Jk" secondAttribute="centerX" id="9UK-pO-seb"/>
+                                        <constraint firstItem="GnD-I5-NeN" firstAttribute="centerY" secondItem="Vxn-hQ-3Jk" secondAttribute="centerY" id="LoM-jg-Jg3"/>
+                                        <constraint firstItem="xEQ-NQ-vRb" firstAttribute="centerY" secondItem="Vxn-hQ-3Jk" secondAttribute="centerY" id="emk-Zh-cQ5"/>
+                                        <constraint firstItem="GnD-I5-NeN" firstAttribute="leading" secondItem="Vxn-hQ-3Jk" secondAttribute="leading" constant="8" id="hfj-lH-STW"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="xEQ-NQ-vRb" id="Ncq-iQ-tyD"/>
+                                    <outlet property="thumbnailImageView" destination="GnD-I5-NeN" id="4jF-Vd-H3i"/>
+                                    <segue destination="kn9-dZ-s6b" kind="show" identifier="oefeningDetail" id="dM3-io-Wa7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -198,18 +335,29 @@
                             <outlet property="delegate" destination="6U3-bA-kDH" id="8o8-Eq-ckK"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Oefeningen" id="Bb0-Hd-Kkg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="My8-2d-1pN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3482" y="733"/>
+            <point key="canvasLocation" x="3480.8000000000002" y="732.68365817091455"/>
         </scene>
-        <!--AV Player View Controller-->
-        <scene sceneID="fhv-qC-sWR">
+        <!--Video Player View Controller-->
+        <scene sceneID="LzL-bA-88k">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="9A7-9Y-EGE" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UQF-cY-mrJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="kn9-dZ-s6b" customClass="VideoPlayerViewController" customModule="Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b15-jS-bYv"/>
+                        <viewControllerLayoutGuide type="bottom" id="yZa-01-DSZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Qf-J1-IIk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taV-DJ-s8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4342" y="733"/>
+            <point key="canvasLocation" x="4351" y="733"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AFv-0M-Ngs">
@@ -230,4 +378,7 @@
             <point key="canvasLocation" x="1729" y="-28"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="glorieuxParking.jpg" width="800" height="504"/>
+    </resources>
 </document>

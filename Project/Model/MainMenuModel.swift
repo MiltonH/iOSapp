@@ -8,7 +8,7 @@
 
 import Foundation
 class MainMenuModel {
-    let menuItems : [String] = ["oefeningen","problemen","chirurgen","dienst","glorieux","afspreken"]
+    let menuItems : [String] = ["oefeningen","problemen","chirurgen","glorieux","afspreken"]
     
     var count: Int {
         return menuItems.count
