@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class MainMenuModel {
     let menuItems : [String] = ["oefeningen","problemen","chirurgen","glorieux","afspreken"]
     

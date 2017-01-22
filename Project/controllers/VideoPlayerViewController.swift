@@ -14,6 +14,7 @@ import AVFoundation
 class VideoPlayerViewController: UIViewController {
     
     var videoName: String!
+    var playerLayer: AVPlayerLayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class VideoPlayerViewController: UIViewController {
         if let path = Bundle.main.path(forResource: videoName, ofType: "mov") {
             let url = NSURL(fileURLWithPath: path)
             let player = AVPlayer(url: url as URL)
-            let playerLayer = AVPlayerLayer(player: player)
+            playerLayer = AVPlayerLayer(player: player)
             playerLayer.frame = self.view.bounds
             self.view.layer.addSublayer(playerLayer)
             player.play()

@@ -8,7 +8,7 @@
 
 import UIKit
 class OefeningenViewController: UITableViewController {
-    private var oefeningnen: [Oefening] = [Oefening(name: "TestOefening", thumbnail: #imageLiteral(resourceName: "doge.jpg"), videoName: "voorbeeldvideo" )]
+    private var oefeningnen: [Oefening] = [Oefening(id: 1,name: "PendelOefening", thumbnail: #imageLiteral(resourceName: "thumbnailplaceholder.png"), videoName: "pendeloefening" )]
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -24,6 +24,8 @@ class OefeningenViewController: UITableViewController {
         let oefening = oefeningnen[indexPath.row]
         cell.thumbnailImageView.image = oefening.thumbnail
         cell.nameLabel.text = "\(oefening.name)"
+        cell.thumbnailImageView.layer.cornerRadius = 5
+        cell.thumbnailImageView.clipsToBounds = true
         return cell
     }
     

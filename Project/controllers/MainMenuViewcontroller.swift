@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainMenuViewController: UICollectionViewController {
     
@@ -14,6 +15,56 @@ class MainMenuViewController: UICollectionViewController {
     let reuseIdentifier = "MainMenuCell"
     let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     var itemsPerRow: CGFloat = 3
+    
+    //realm testing
+    var items = List<ProbleemAdapter>()
+    var notificationToken: NotificationToken!
+    var realm: Realm!
+    
+    override func viewDidLoad() {
+        setupRealm()
+    }
+    
+    func setupRealm() {
+        // Log in existing user with username and password
+        let username = "test@test.be"  // <--- Update this
+        let password = "test"  // <--- Update this
+        
+        SyncUser.logIn(with: .usernamePassword(username: username, password: password, register: false), server: URL(string: "http://127.0.0.1:9080")!) { user, error in
+            guard let user = user else {
+                fatalError(String(describing: error))
+            }
+            
+            DispatchQueue.main.async {
+                // Open Realm
+                let configuration = Realm.Configuration(
+                    syncConfiguration: SyncConfiguration(user: user, realmURL: URL(string: "realm://127.0.0.1:9080/~/realmtasks")!)
+                )
+                self.realm = try! Realm(configuration: configuration)
+                
+                // Show initial tasks
+                func updateList() {
+                    if self.items.realm == nil, let list = self.realm.objects(ProbleemList.self).first {
+                        self.items = list.items
+                        print("realm stuff done")
+                    }
+                    
+                }
+                updateList()
+                
+                // Notify us when Realm changes
+                self.notificationToken = self.realm.addNotificationBlock { _ in
+                    updateList()
+                }
+            }
+        }
+    }
+    
+    deinit {
+        notificationToken.stop()
+    }
+    
+    //end realm testing
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape {

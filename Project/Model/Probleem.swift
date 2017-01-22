@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RealmSwift
+
 struct Probleem {
     
     let name: String
@@ -32,4 +34,14 @@ extension Probleem: Comparable {
     static func <(lhs: Probleem, rhs: Probleem) -> Bool {
         return lhs.name < rhs.name
     }
+}
+
+class ProbleemAdapter: Object {
+    dynamic var name: String = ""
+    dynamic var image: NSData!
+    dynamic var beschrijving: String = ""
+}
+
+class ProbleemList: Object {
+    let items = List<ProbleemAdapter>()
 }

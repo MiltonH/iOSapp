@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 struct Oefening {
-    
+    let id: Int
     let name: String
     let thumbnail: UIImage
     let videoName: String
@@ -18,7 +18,8 @@ struct Oefening {
 extension Oefening: Hashable {
     
     static func ==(lhs: Oefening, rhs: Oefening) -> Bool {
-        return lhs.name == rhs.name
+        return lhs.id == rhs.id &&
+            lhs.name == rhs.name
             && lhs.thumbnail == rhs.thumbnail
             && lhs.videoName == rhs.videoName
     }
@@ -31,6 +32,6 @@ extension Oefening: Hashable {
 extension Oefening: Comparable {
     
     static func <(lhs: Oefening, rhs: Oefening) -> Bool {
-        return lhs.name < rhs.name
+        return lhs.id < rhs.id
     }
 }
