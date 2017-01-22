@@ -14,6 +14,8 @@ class ChirurgViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var detailsTextView: UITextView!
     
+    
+    
     override func viewDidLoad() {
         nameLabel.text = chirurg.name
         chirurgImageView.image = chirurg.image
@@ -26,5 +28,15 @@ class ChirurgViewController: UIViewController {
         
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if !splitViewController!.isCollapsed {
+            navigationItem.leftBarButtonItem = splitViewController!.displayModeButtonItem
+        }
+    }
+    
+    @IBAction func returnToMenu(){
+        self.performSegue(withIdentifier: "unwindToMenu", sender: self)
+    }
     
 }

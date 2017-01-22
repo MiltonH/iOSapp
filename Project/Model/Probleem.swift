@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RealmSwift
+//import RealmSwift
 
 struct Probleem {
     
@@ -36,12 +36,17 @@ extension Probleem: Comparable {
     }
 }
 
-class ProbleemAdapter: Object {
-    dynamic var name: String = ""
-    dynamic var image: NSData!
-    dynamic var beschrijving: String = ""
-}
-
-class ProbleemList: Object {
-    let items = List<ProbleemAdapter>()
-}
+//class ProbleemAdapter: Object {
+//    dynamic var name: String = ""
+//    dynamic var image: NSData!
+//    dynamic var beschrijving: String = ""
+//}
+//
+//class ProbleemList: Object {
+//    dynamic var id = ""
+//    let items = List<ProbleemAdapter>()
+//    
+//    override static func primaryKey() -> String? {
+//        return "id"
+//    }
+//}

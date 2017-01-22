@@ -45,6 +45,9 @@
 		52DA7A1A1E352806007C5575 /* thumbnailplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 52DA7A191E352806007C5575 /* thumbnailplaceholder.png */; };
 		52DA7A1D1E352ABB007C5575 /* RC1.png in Resources */ = {isa = PBXBuildFile; fileRef = 52DA7A1B1E352ABB007C5575 /* RC1.png */; };
 		52DA7A1E1E352ABB007C5575 /* RC2.png in Resources */ = {isa = PBXBuildFile; fileRef = 52DA7A1C1E352ABB007C5575 /* RC2.png */; };
+		52DA7A201E35448C007C5575 /* glorieux2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52DA7A1F1E35448C007C5575 /* glorieux2.jpg */; };
+		52DA7A221E35451F007C5575 /* glorieux3.png in Resources */ = {isa = PBXBuildFile; fileRef = 52DA7A211E35451F007C5575 /* glorieux3.png */; };
+		52DA7A241E354CF3007C5575 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DA7A231E354CF3007C5575 /* EmptyViewController.swift */; };
 		52FFDC451E267F2F006B6870 /* Probleem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFDC441E267F2F006B6870 /* Probleem.swift */; };
 		52FFDC491E268427006B6870 /* ProblemenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFDC481E268427006B6870 /* ProblemenViewController.swift */; };
 		52FFDC4B1E2687A1006B6870 /* ProbleemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FFDC4A1E2687A1006B6870 /* ProbleemCell.swift */; };
@@ -115,6 +118,9 @@
 		52DA7A191E352806007C5575 /* thumbnailplaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnailplaceholder.png; sourceTree = "<group>"; };
 		52DA7A1B1E352ABB007C5575 /* RC1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RC1.png; sourceTree = "<group>"; };
 		52DA7A1C1E352ABB007C5575 /* RC2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RC2.png; sourceTree = "<group>"; };
+		52DA7A1F1E35448C007C5575 /* glorieux2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = glorieux2.jpg; sourceTree = "<group>"; };
+		52DA7A211E35451F007C5575 /* glorieux3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glorieux3.png; sourceTree = "<group>"; };
+		52DA7A231E354CF3007C5575 /* EmptyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
 		52FFDC441E267F2F006B6870 /* Probleem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Probleem.swift; sourceTree = "<group>"; };
 		52FFDC481E268427006B6870 /* ProblemenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProblemenViewController.swift; sourceTree = "<group>"; };
 		52FFDC4A1E2687A1006B6870 /* ProbleemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProbleemCell.swift; sourceTree = "<group>"; };
@@ -262,6 +268,8 @@
 		526668A41DF6EEC0005114A1 /* media */ = {
 			isa = PBXGroup;
 			children = (
+				52DA7A211E35451F007C5575 /* glorieux3.png */,
+				52DA7A1F1E35448C007C5575 /* glorieux2.jpg */,
 				52DA7A1B1E352ABB007C5575 /* RC1.png */,
 				52DA7A1C1E352ABB007C5575 /* RC2.png */,
 				52DA7A191E352806007C5575 /* thumbnailplaceholder.png */,
@@ -296,6 +304,7 @@
 				52DA7A071E34F435007C5575 /* glorieuxViewController.swift */,
 				52DA7A0F1E3500DF007C5575 /* ChirurgenViewController.swift */,
 				52DA7A151E35021A007C5575 /* ChirurgViewController.swift */,
+				52DA7A231E354CF3007C5575 /* EmptyViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -422,6 +431,7 @@
 				52DA7A1A1E352806007C5575 /* thumbnailplaceholder.png in Resources */,
 				526668811DF6DB7F005114A1 /* LaunchScreen.storyboard in Resources */,
 				5266687E1DF6DB7F005114A1 /* Assets.xcassets in Resources */,
+				52DA7A201E35448C007C5575 /* glorieux2.jpg in Resources */,
 				52DA7A011E34E9D4007C5575 /* impingement.png in Resources */,
 				52A172671E33FF240097EC9A /* pendeloefening.mov in Resources */,
 				52DA79FF1E34E9D4007C5575 /* calcifying1.png in Resources */,
@@ -430,6 +440,7 @@
 				52DA7A041E34E9D4007C5575 /* labrum2.png in Resources */,
 				52DA7A1D1E352ABB007C5575 /* RC1.png in Resources */,
 				52DA7A001E34E9D4007C5575 /* calcifying2.png in Resources */,
+				52DA7A221E35451F007C5575 /* glorieux3.png in Resources */,
 				52DA79FE1E34E9D4007C5575 /* biceps2.png in Resources */,
 				52DA7A0A1E34F910007C5575 /* glorieuxParking.jpg in Resources */,
 				52DA7A021E34E9D4007C5575 /* impingement2.png in Resources */,
@@ -609,6 +620,7 @@
 				52DA7A061E34EEC8007C5575 /* AfsprekenController.swift in Sources */,
 				52A172631E33F9270097EC9A /* Oefening.swift in Sources */,
 				525482A91E1FEC480092425C /* MainMenuModel.swift in Sources */,
+				52DA7A241E354CF3007C5575 /* EmptyViewController.swift in Sources */,
 				526668771DF6DB7F005114A1 /* AppDelegate.swift in Sources */,
 				5256D0431E32AC2F00DDD647 /* ProbleemViewController.swift in Sources */,
 				52A172611E33F8F60097EC9A /* OefeningenViewController.swift in Sources */,

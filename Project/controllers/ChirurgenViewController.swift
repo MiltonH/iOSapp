@@ -8,7 +8,9 @@
 
 import UIKit
 class ChirurgenViewController: UITableViewController {
-    private var chirurgenList: [Chirurg] = [Chirurg(name: "Dr. Olivier Zeegers", image:#imageLiteral(resourceName: "drZeegers.jpg"), details: "details komen hier     sdfsdfsdfsdgdsfgsdbgjhsfudijsvisdfivfdjhvbdfsbvfhdivbfdsjivn fdjocnvfjifd" )]
+    private var chirurgenList: [Chirurg] = [Chirurg(name: "Dr. Olivier Zeegers", image:#imageLiteral(resourceName: "drZeegers.jpg"), details: "details komen hier     sdfsdfsdfsdgdsfgsdbgjhsfudijsvisdfivfdjhvbdfsbvfhdivbfdsjivn fdjocnvfjifd" ),
+                                            Chirurg(name: "Dr. Olivier Fabre", image:#imageLiteral(resourceName: "drFabre.jpg"), details: "details komen hier     sdfsdfsdfsdgdsfgsdbgjhsfudijsvisdfivfdjhvbdfsbvfhdivbfdsjivn fdjocnvfjifd" )]
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -35,9 +37,10 @@ class ChirurgenViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case "chirurgDetail":
-            let destination = segue.destination as! ChirurgViewController
+            let navigationController = segue.destination as! UINavigationController
+            let chirurgViewController = navigationController.topViewController as! ChirurgViewController
             let selectedIndex = tableView.indexPathForSelectedRow!.row
-            destination.chirurg = chirurgenList[selectedIndex]
+            chirurgViewController.chirurg = chirurgenList[selectedIndex]
         default:
             break
         }
