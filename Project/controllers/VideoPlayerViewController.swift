@@ -13,8 +13,10 @@ import AVFoundation
 
 class VideoPlayerViewController: UIViewController {
     
+    var player : AVPlayer?
+    @IBOutlet weak var viewPlay: UIView!
     var videoName: String!
-    var playerLayer: AVPlayerLayer!
+    var playerLayer:AVPlayerLayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +28,25 @@ class VideoPlayerViewController: UIViewController {
         
         if let path = Bundle.main.path(forResource: videoName, ofType: "mov") {
             let url = NSURL(fileURLWithPath: path)
-            let player = AVPlayer(url: url as URL)
+            player = AVPlayer(url: url as URL)
             playerLayer = AVPlayerLayer(player: player)
-            playerLayer.frame = self.view.bounds
-            self.view.layer.addSublayer(playerLayer)
-            player.play()
+            playerLayer!.frame = self.view.bounds
+            self.view.layer.addSublayer(playerLayer!)
         }
         else {
             print("Didn't find video path")
         }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        playerLayer!.frame = self.view.bounds
+    }
+    
+    @IBAction func play(_ sender: Any) {
+        player?.play()
+    }
+    
+    @IBAction func stop(_ sender: Any) {
+        player?.pause()
     }
 }

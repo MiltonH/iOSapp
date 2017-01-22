@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -564,7 +565,7 @@
                                 <connections>
                                     <outlet property="nameLabel" destination="xEQ-NQ-vRb" id="Ncq-iQ-tyD"/>
                                     <outlet property="thumbnailImageView" destination="GnD-I5-NeN" id="4jF-Vd-H3i"/>
-                                    <segue destination="kn9-dZ-s6b" kind="presentation" identifier="oefeningDetail" id="YWw-G6-jzW"/>
+                                    <segue destination="kn9-dZ-s6b" kind="show" identifier="oefeningDetail" id="YWw-G6-jzW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -579,7 +580,7 @@
             </objects>
             <point key="canvasLocation" x="3480.8000000000002" y="732.68365817091455"/>
         </scene>
-        <!--Video Player View Controller-->
+        <!--Oefening-->
         <scene sceneID="LzL-bA-88k">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="taV-DJ-s8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -591,11 +592,37 @@
                     <view key="view" contentMode="scaleToFill" id="9Qf-J1-IIk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="49l-yH-QUb">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Oefening" id="SeT-J2-HaZ">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="pause" id="pks-qL-Ne1">
+                                <connections>
+                                    <action selector="stop:" destination="kn9-dZ-s6b" id="LWe-iz-tJr"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="play" id="Bvn-1I-j6G">
+                                <connections>
+                                    <action selector="play:" destination="kn9-dZ-s6b" id="uKf-b3-Dds"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="viewPlay" destination="49l-yH-QUb" id="7kY-31-9fB"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="4300" y="733"/>
+            <point key="canvasLocation" x="4300" y="732.68365817091455"/>
         </scene>
         <!--Empty View Controller-->
         <scene sceneID="UuO-hC-lFz">
