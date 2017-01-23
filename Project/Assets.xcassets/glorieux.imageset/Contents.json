@@ -2,27 +2,27 @@
   "images" : [
     {
       "idiom" : "iphone",
-      "filename" : "ProblemenX1iPhone-1.png",
+      "filename" : "glorieuxX1iPhone.png",
       "scale" : "1x"
     },
     {
       "idiom" : "iphone",
-      "filename" : "problemenX2iPhone.png",
+      "filename" : "glorieuxX2iPhone.png",
       "scale" : "2x"
     },
     {
       "idiom" : "iphone",
-      "filename" : "problemenX3iPhone.png",
+      "filename" : "glorieuxX3iPhone.png",
       "scale" : "3x"
     },
     {
       "idiom" : "ipad",
-      "filename" : "problemenX1iPad-1.png",
+      "filename" : "glorieuxX1iPad.png",
       "scale" : "1x"
     },
     {
       "idiom" : "ipad",
-      "filename" : "problemenX2iPad.png",
+      "filename" : "glorieuxX2iPad.png",
       "scale" : "2x"
     }
   ],
